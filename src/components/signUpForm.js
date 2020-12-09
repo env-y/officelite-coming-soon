@@ -6,6 +6,7 @@ import Input from './input';
 
 import { Button } from '../style/button';
 import { WrapSelect } from '../style/select';
+import { Row } from '../style/fragments';
 import CHECK_ICON from '../images/sign-up/icon-check.svg';
 
 const optionsPack = [
@@ -28,13 +29,6 @@ const FormBlock = styled.div`
   background: ${({ theme }) => theme.colors.light};
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
   border-radius: 1.3rem;
-`;
-
-const Row = styled.div`
-  margin-bottom: 2.4rem;
-  ${({ max }) => max && `
-    margin-bottom: 4rem;
-  `}
 `;
 
 const PlanLine = styled.div`

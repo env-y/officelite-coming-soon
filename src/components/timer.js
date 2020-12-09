@@ -7,6 +7,7 @@ const Title = styled.p`
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  text-align: center;
   color: ${({ theme }) => theme.colors.light};
   span {
     color: ${({ theme }) => theme.colors.activeBlue};
@@ -15,20 +16,30 @@ const Title = styled.p`
   ${({ lightTheme, theme }) => lightTheme && `
     color: ${theme.colors.mainText};
   `}
+  ${media.sm`
+    text-align: left;
+  `}
 `;
 
 const Time = styled.div`
   display: inline-block;
-  width: 7rem;
-  padding: 1.1rem 1.6rem 1.0rem;
+  width: 6rem;
+  padding: 1.1rem 0.6rem 1.0rem;
   text-align: center;
   border-radius: 1.3rem;
   &:not(:last-child) {
-    margin-right: 1.6rem;
+    margin-right: 1rem;
   }
   background: ${({ theme }) => theme.colors.lighterText};
   ${({ lightTheme, theme }) => lightTheme && `
     background: ${theme.colors.lightCard};
+  `}
+  ${media.s`
+    width: 7rem;
+    padding: 1.1rem 1.6rem 1.0rem;
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
   `}
   ${media.sm`
     width: 10rem;
@@ -38,12 +49,16 @@ const Time = styled.div`
 
 const Value = styled.p`
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   line-height: 4.8rem;
   margin: 0;
   color: ${({ theme }) => theme.colors.light};
   ${({ lightTheme, theme }) => lightTheme && `
     color: ${theme.colors.activeBlue};
+  `}
+
+  ${media.s`
+    font-size: 3.2rem;
   `}
 
   ${media.sm`

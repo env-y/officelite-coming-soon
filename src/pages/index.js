@@ -7,7 +7,7 @@ import Header from '../components/header';
 import CardPlan from '../components/cardPlan';
 import Timer from '../components/timer';
 
-import { Container, Text, MainBlock, MainBlockGrid, WrapPlans, WrapHome } from '../style/fragments';
+import { Container, Text, MainBlock, MainBlockGrid, WrapPlans, WrapHome, SignUpGrid } from '../style/fragments';
 import { Button } from '../style/button';
 
 import CHART_IMG from '../images/home/illustration-charts.svg';
@@ -78,7 +78,7 @@ const IndexPage = () => {
           </section>
 
           <section>
-            <Grid container spacing={0} justify="space-between" alignItems="center">
+            <SignUpGrid container spacing={4} alignItems="center">
               <Grid item>
                 <Timer />
               </Grid>
@@ -86,7 +86,7 @@ const IndexPage = () => {
               <Grid item>
                 <Button as={Link} to="/sign-up">Get Started</Button>
               </Grid>
-            </Grid>
+            </SignUpGrid>
           </section>
         </Container>
       </WrapHome>

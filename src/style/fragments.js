@@ -11,20 +11,6 @@ export const Container = styled.div`
   padding: 4.6rem 2.3rem 9rem;
 `;
 
-export const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  ${({ align }) => align && `
-    align-items: ${align};
-  `}
-  ${({ gutter }) => gutter && `
-    margin: 0 ${-gutter/2}rem;
-    & > div {
-      padding: 0 ${gutter/2}rem;
-    }
-  `}
-`;
-
 export const Text = styled.p`
   color: ${({ theme }) => theme.colors.textLight};
   ${({ margin }) => margin && `
@@ -108,4 +94,11 @@ export const WrapSignUp = styled.div`
       `}
     `}
 
+`;
+
+export const Row = styled.div`
+  margin-bottom: 2.4rem;
+  ${({ max }) => max && `
+    margin-bottom: 4rem;
+  `}
 `;

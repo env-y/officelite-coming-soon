@@ -5,6 +5,7 @@ export default {
     lg: 1024,
     md: 768,
     sm: 468,
+    s: 321,
     xs: 0,
   },
 

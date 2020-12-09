@@ -6,6 +6,8 @@ const Input = styled.input`
   padding: 0 1.6rem 1.2rem;
   border: none;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.line};
+  border-radius: 0;
+  -webkit-appearance: none;
   font-size: 1.6rem;
   line-height: 2.8rem;
   &::placeholder {
