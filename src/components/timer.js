@@ -75,7 +75,7 @@ const TimeBlock = ({ label, value, lightTheme }) => (
 );
 
 const calculateTimeLeft = () => {
-  const difference = +new Date(`2021-1-10`) - +new Date();
+  const difference = +new Date(`2021/1/10`) - +new Date();
   let timeLeft = {};
 
   if (difference > 0) {
