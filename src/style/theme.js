@@ -9,7 +9,7 @@ export default {
   },
 
   colors: {
-    bg: '#F2F2F2',
+    bg: '#FAFAFA',
     mainText: '#333950',
     lighterText: '#333950', //check
     textLight: '#747B95',

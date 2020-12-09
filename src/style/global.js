@@ -11,6 +11,8 @@ export default createGlobalStyle`
     height: 100%;
     font-size: 62.5%;
     scroll-behavior: smooth;
+  }
+  body {
     background: ${({ theme }) => theme.colors.bg};
   }
   * {
