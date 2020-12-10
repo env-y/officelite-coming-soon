@@ -63,9 +63,9 @@ const IndexPage = () => {
 
         <section>
           <WrapPlans>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} justify="center">
               {plans.map(plan => (
-                <Grid key={plan.name} item xs={12} md={4}>
+                <Grid key={plan.name} item xs={12} sm={6} md={4}>
                   <CardPlan
                     {...plan}
                   />
