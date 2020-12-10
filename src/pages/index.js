@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Grid from '@material-ui/core/Grid';
 
-import Layout from '../components/layout';
 import Header from '../components/header';
 import CardPlan from '../components/cardPlan';
 import Timer from '../components/timer';
@@ -37,60 +36,58 @@ const plans = [
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <WrapHome>
-        <Container>
-          <Header />
-          <section>
-            <MainBlock>
-              <MainBlockGrid container spacing={5} alignItems="center">
-                <Grid item xs={12} sm={6}>
-                  <h1>
-                    A simple solution to complex tasks is coming soon
-                  </h1>
-                  <Text margin="0 0 3.2rem">
-                  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-      collaboration platform built with an intuitive interface to improve productivity.
-                  </Text>
-                  <Button as={Link} to="/sign-up">
-                    Get Started
-                  </Button>
+    <WrapHome>
+      <Container>
+        <Header />
+        <section>
+          <MainBlock>
+            <MainBlockGrid container spacing={5} alignItems="center">
+              <Grid item xs={12} sm={6}>
+                <h1>
+                  A simple solution to complex tasks is coming soon
+                </h1>
+                <Text margin="0 0 3.2rem">
+                Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
+    collaboration platform built with an intuitive interface to improve productivity.
+                </Text>
+                <Button as={Link} to="/sign-up">
+                  Get Started
+                </Button>
+              </Grid>
+              <Grid item xs={7} sm={6}>
+                <img style={{ width: '100%' }} src={CHART_IMG} alt="charts" />
+              </Grid>
+            </MainBlockGrid>
+          </MainBlock>
+        </section>
+
+        <section>
+          <WrapPlans>
+            <Grid container spacing={3}>
+              {plans.map(plan => (
+                <Grid key={plan.name} item xs={12} md={4}>
+                  <CardPlan
+                    {...plan}
+                  />
                 </Grid>
-                <Grid item xs={7} sm={6}>
-                  <img style={{ width: '100%' }} src={CHART_IMG} alt="charts" />
-                </Grid>
-              </MainBlockGrid>
-            </MainBlock>
-          </section>
+              ))}
+            </Grid>
+          </WrapPlans>
+        </section>
 
-          <section>
-            <WrapPlans>
-              <Grid container spacing={3}>
-                {plans.map(plan => (
-                  <Grid key={plan.name} item xs={12} md={4}>
-                    <CardPlan
-                      {...plan}
-                    />
-                  </Grid>
-                ))}
-              </Grid>
-            </WrapPlans>
-          </section>
+        <section>
+          <SignUpGrid container spacing={4} alignItems="center">
+            <Grid item>
+              <Timer />
+            </Grid>
 
-          <section>
-            <SignUpGrid container spacing={4} alignItems="center">
-              <Grid item>
-                <Timer />
-              </Grid>
-
-              <Grid item>
-                <Button as={Link} to="/sign-up">Get Started</Button>
-              </Grid>
-            </SignUpGrid>
-          </section>
-        </Container>
-      </WrapHome>
-    </Layout>
+            <Grid item>
+              <Button as={Link} to="/sign-up">Get Started</Button>
+            </Grid>
+          </SignUpGrid>
+        </section>
+      </Container>
+    </WrapHome>
   )
 }
 
